@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+	navbarOpen = false;
+
+	toggleNavbar(){
+		this.navbarOpen = !this.navbarOpen;
+	}
+
+	useAnchorLink(link: string){
+		window.location.href = "./" + link;
+		this.navbarOpen = false;
+	}
 
 }
