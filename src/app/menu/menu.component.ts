@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 	navbarOpen = false;
+	resumeLink = environment.resumeLink;
+	linkedinLink = environment.linkedinLink;
 
 	toggleNavbar(){
 		this.navbarOpen = !this.navbarOpen;
